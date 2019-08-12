@@ -1,1 +1,1 @@
-console.log('Hello modernjs');
+console.log('Hello modernjs on the backend.');
