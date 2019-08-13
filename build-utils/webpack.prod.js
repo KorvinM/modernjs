@@ -1,12 +1,10 @@
-const {DefinePlugin} = require('webpack');
+const Dotenv = require('dot-env-webpack');
 module.exports ={
   mode: 'production',
   devtool: 'source-map',
   plugins: [
-  new DefinePlugin({
-    'process.env': {
-      'NODE_ENV': JSON.stringify('development'),
-    }
-  }),
+  new Dotenv({
+    path: './.env-prod',
+  })
   ],
 };
