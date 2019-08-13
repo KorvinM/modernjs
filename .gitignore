@@ -2,3 +2,6 @@
 .env*
 #ignore node modules
 node_modules/
+
+#ignore build dir
+build/
