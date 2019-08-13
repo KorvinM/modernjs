@@ -1,0 +1,4 @@
+#ignore sensitive variables
+.env
+#ignore node modules
+node_modules/
