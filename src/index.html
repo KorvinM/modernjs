@@ -4,16 +4,24 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <style>
       body{font-size: 16px;line-height: 1.33; font-size: 1em;font-family: sans;background-color: rebeccapurple;}
+      h1{font-size: 2em;
+      text-align: center;
+      letter-spacing: 0.17em;
+      margin: 0.4em auto;}
+      div.block{background-color: rgba(0,0,0,0.6);
+      color: whitesmoke;
+      width:88%;
+      margin: 1em auto;
+      padding: 0.6em 0.24em 0.24em 1.6em;
+      border-radius:6em 4em 0;}
+
       @media only screen and (min-width: 36em) {
         body{font-size: 1.06em;}
         .lead{font-size: 1.24em;}
-
         }
-      h1{font-size: 2em;text-align:center;letter-spacing: 0.17em; margin: 0.4em auto;}
-      div.block{background-color: rgba(0,0,0,0.6);color: whitesmoke;width:88%;
-                margin: 1em auto; padding: 0.6em 0.24em 0.24em 1em;border-radius:0.38em 2em;}
-      @media only screen and (min-width: 60em) {
+        @media only screen and (min-width: 60em) {
         div.block{width:62%}
+        h1{font-size: 3em;}
       }
       a{text-decoration:none; transition: all 0.38s;color: #efcf97;}
       a:hover{text-decoration:none;color: #67a9f0;}
@@ -32,5 +40,10 @@
     <div class="block">
       <p>Both production and development modes are enabled, with the code optimised with a common configiration. Environment variables can be set dynamically.
     </div>
+    <div class="block">
+      <p>Webkit analytics tools are included, generating
+        a <a href="report.html">report</a> and a
+       <a href="stats.html">statistics visualisation</a> of the build.
+    <div>
   </body>
 </html>
