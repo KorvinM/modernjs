@@ -11,11 +11,11 @@
       text-align: center;
       letter-spacing: 0.17em;
       margin: 0.4em auto;}
-      div.block{background-color: rgba(0,0,0,0.5);
+      div.block{background-color: #3b0d6a;
       width:86%;
       margin: 1em auto;
       padding: 0.6em 1em 0.24em 1.4em;
-      border-radius:6.2em 4em 0;}
+      border-radius: 3.8em 6.2em 0 3.8em;}
       code {background-color:rgba(0,0,0,0.38);
       padding: 0 0.24em; font-size:1.24em;
       }
@@ -45,12 +45,15 @@
   <body>
     <div class="block">
       <h1><%= htmlWebpackPlugin.options.title %></h1>
-      <p class="lead">Hi there. This application's development and production
-        uses node js to run webpack, which with babel enables a basic set up for a front-end app,
-        according to <a href="https://www.robinwieruch.de/">rwierucl</a>.
-        <p>Both production and development modes are enabled, with the code optimised
-          with a common configiration. Environment variables can be set dynamically.
-
+      <p class="lead">Hi there. This application represents a basic set up for a
+        modern front-end webapp, based on <a href="https://www.robinwieruch.de/">rwierucl</a>'s
+        ideas. Developed using node js, it uses webpack to bundle js assets and
+        transpile with babel.
+        <p>Both production and development modes are enabled, webpack code optimised
+          with a common configiration. Environment variables can be set dynamically,
+          and source mapping is enabled to aid debugging.
+        <p>Check your browser's console to see if this is in development or production mode,
+          read a welcome message, and see a deliberate bug to test source mapping.
     </div>
       <div class="block">
         <h2>How to use</h2><p>
