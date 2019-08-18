@@ -1,21 +1,18 @@
 const path = require('path'),
   {CleanWebpackPlugin} = require('clean-webpack-plugin'),
-  HtmlWebpackPlugin = require('html-webpack-plugin'),
-  CssExtract = require('mini-css-extract-plugin');
+  HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  //use src/index.js as entry point to bundle. If the src/index.js file imports other JavaScript files, bundle them as well
+  /*use src/index.js as entry point to bundle.
+  If the src/index.js file imports other JavaScript files, bundle them as well
+  */
   entry: './src/index.js',
   module: {
     rules: [
-      {/*  //add babel loader */
+      {/*  //run js through babel and load */
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
-      },
-      {//add style loaders
-        test:/\.scss$/,
-        use:[CssExtract.loader,'css-loader', 'sass-loader']
       }
     ]
   },
@@ -25,12 +22,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Modernjs',
+      title: 'Modern-js',
       template: './src/index.html'
     }),
-    new CssExtract(),
-
-
   ],
 //*/
   //define the output path
@@ -39,7 +33,7 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  //define the server path
+  //define the development server path
   devServer: {
     contentBase: './build'
   }
