@@ -1,4 +1,5 @@
 /* index.js */
+import '../src/styles/main.scss';
 
 import sum from './sum.js';
 console.log(process.env.NODE_ENV);

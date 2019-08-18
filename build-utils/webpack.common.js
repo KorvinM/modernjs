@@ -1,12 +1,15 @@
-const path = require('path');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path'),
+  {CleanWebpackPlugin} = require('clean-webpack-plugin'),
+  HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-  //use src/index.js as entry point to bundle. If the src/index.js file imports other JavaScript files, bundle them as well
+  /*use src/index.js as entry point to bundle.
+  If the src/index.js file imports other JavaScript files, bundle them as well
+  */
   entry: './src/index.js',
-  module: {/*  //add babel loader */
+  module: {
     rules: [
-      {
+      {/*  //run js through babel and load */
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
@@ -19,9 +22,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'NodeJS-WebPack Base ',
+      title: 'Modern-js',
       template: './src/index.html'
-    })
+    }),
   ],
 //*/
   //define the output path
@@ -30,7 +33,7 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  //define the server path
+  //define the development server path
   devServer: {
     contentBase: './build'
   }
