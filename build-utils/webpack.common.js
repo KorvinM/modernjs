@@ -22,7 +22,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Modern-js',
+      title: 'Modern',
+      subtitle: 'Webpack base',
       template: './src/index.html'
     }),
   ],

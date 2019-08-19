@@ -6,21 +6,26 @@
   <body>
     <div class="block">
       <h1><%= htmlWebpackPlugin.options.title %></h1>
-      <p class="lead">Hi there. This application represents a basic set up for a
-        modern front-end webapp, based on <a href="https://www.robinwieruch.de/">rwierucl</a>'s
-        ideas. Developed using node js, it uses webpack to bundle js assets and
-        transpile with babel.
-        <p>Both production and development modes are enabled, webpack code optimised
-          with a common configiration. Environment variables can be set dynamically,
-          and source mapping is enabled to aid debugging.
-        <p>Check your browser's console to see if this is in development or production mode,
-          read a welcome message, and see a deliberate bug to test source mapping.
+      <h2><%= htmlWebpackPlugin.options.subtitle %></h2>
+      <p class="lead">Hi there. This foundation for a
+        modern front-end webapp, built in webpack, transpiles the latest JavaScript with babel
+        and compiles styles from SASS.
+        <p> Other than that, it's agnostic, adding no frameworks or
+          libraries. Production and development modes are enabled, and environment
+          variables can be set dynamically.
+        <p>Check your browser's console to read a welcome message, check mode,
+          and inspect a deliberate bug to test source mapping.
+          <p style="font-size:0.93em;text-align:right;">
+            Inspired by <a href="https://www.robinwieruch.de/">Robin Wieruch</a>'s node.js tutorials <a href="https://www.robinwieruch.de/minimal-node-js-babel-setup/">
+              [1]</a>
     </div>
       <div class="block">
         <h2>How to use</h2><p>
           To recreate this site, use <a href="https://github.com/KorvinM/modernjs/tree/frontend">this branch</a> of the project.
         <br><code>npm start</code> to run in dev mode.
-        <br><code>npm run build</code> for a production build into a build/ folder.
+        <br><code>npm run build</code> for a production build into a build/ folder, with a main.css stylesheet.
+        <br><code>npm run build:int-css</code> for a production build with css injected into the head
+
         <p>Webkit analytics tools are included:
           <br><code>npm run build:analyze</code> generates a <a href="report.html">report</a> and a
          <a href="stats.html">statistics visualisation</a> of the build.
