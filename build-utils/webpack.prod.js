@@ -5,9 +5,10 @@ module.exports ={
   devtool: 'source-map',
   module: {
     rules: [
-      {//add style loaders
+      {/*style loaders
+        chained loaders run in reverse order*/
         test:/\.scss$/,
-        use:[CssExtract.loader,'css-loader', 'sass-loader']
+        use:[CssExtract.loader,'css-loader', 'postcss-loader','sass-loader']
       }
     ]},
   plugins: [

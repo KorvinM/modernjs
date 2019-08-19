@@ -4,12 +4,12 @@ module.exports ={
   devtool: 'eval-source-map',
   module: {
     rules: [
-      {/*sass/css support
+      {/*style loaders
         chained loaders run in reverse order
         style-loader loads a <style> tag into the DOM after the doc loads
-        this causes FOUC so is reserved for dev mode only*/ 
+        this causes FOUC so is reserved for dev mode only*/
         test:/\.scss$/,
-        use:['style-loader','css-loader', 'sass-loader']
+        use:['style-loader','css-loader', 'postcss-loader', 'sass-loader']
       }
     ]},
   plugins: [
