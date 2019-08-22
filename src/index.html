@@ -7,23 +7,23 @@
     <div class="block">
       <h1><%= htmlWebpackPlugin.options.title %></h1>
       <h2><%= htmlWebpackPlugin.options.subtitle %></h2>
-      <p class="lead">Hi there. Mode represents a foundation for a front-end web application.
-        Built in webpack, it transpiles modern JavaScript with Babel and loads styles
-        from Sass/PostCSS.
-        <p> Other than that, it's agnostic, adding no frameworks or
+      <p class="lead">Hi there. Mode represents a webpack base for a modern front-end web application.
+        <p>Mode transpiles the latest JavaScript with Babel and loads styles from
+          Sass/PostCSS. Other than that, it's minimalist and agnostic, adding no frameworks or
           libraries. Production and development modes are enabled, and environment
-          variables can be set dynamically.
+          variables can be set dynamically. Mode copies static assets such as images
+          and <a href="static/documents/mode.pdf">documents</a> with a dedicated /static directory - no need to import them in your JavaScript.
         <p>Check your browser's console to read a welcome message, check mode,
           and inspect a deliberate bug to test source mapping.
           <p style="font-size:0.93em;text-align:right;">
-            Inspired by <a href="https://www.robinwieruch.de/">Robin Wieruch</a>'s node.js tutorials <a href="https://www.robinwieruch.de/minimal-node-js-babel-setup/">
+            Inspiration: <a href="https://www.robinwieruch.de/">Robin Wieruch</a>'s node.js tutorials <a href="https://www.robinwieruch.de/minimal-node-js-babel-setup/">
               [1]</a>
     </div>
       <div class="block">
         <h2>How to use</h2><p>
           To recreate this site, use <a href="https://github.com/KorvinM/modernjs/tree/frontend">this branch</a> of the project.
         <br><code>npm start</code> to run in dev mode.
-        <br><code>npm run build</code> for a production build into a build/ folder, with a main.css stylesheet.
+        <br><code>npm run build</code> for a production build into a /build directory, with a main.css stylesheet.
         <br><code>npm run build:int-css</code> for a production build with css injected into the head
 
         <p>Webkit analytics tools are included:
@@ -34,6 +34,8 @@
     </div>
     <footer class="main-footer flx">
       <div style="">A project by <a href="http://korvin.org">Korvin M Media</a></div>
+      <div><a href="http://webpack.js.org"><img height="50px"style="" src="static/images/webpack-logo.svg"></a>
+</div>
       <div style=""><a href="https://github.com/KorvinM/modernjs">Source code on Github</a></div>
     </footer>
 

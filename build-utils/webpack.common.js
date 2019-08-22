@@ -1,6 +1,7 @@
 const path = require('path'),
   {CleanWebpackPlugin} = require('clean-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin');
+  const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   /*use src/index.js as entry point to bundle.
@@ -23,9 +24,12 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Mode',
-      subtitle: 'Webpack base',
+      subtitle: 'Front-end web foundation',
       template: './src/index.html'
     }),
+    new CopyPlugin([
+      {from: './src/static', to: 'static'}
+    ])
   ],
 //*/
   //define the output path
