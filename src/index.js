@@ -1,10 +1,20 @@
 /* index.js */
+"use strict";
 import '../src/styles/main.scss';
-import sum from './sum.js';
+/*define some GLOBALS. This could best be abstracted into a file/module*/
+const mode = process.env.NODE_ENV;
+const secret = process.env.MY_SECRETTHING;
 
-let cssNote='Compiled css is loaded dynamically in development mode. Production mode extracts the compiled css into a separate stylesheet, or optionally injects the styles into the head of the document.';
+let cssNote;
+if (mode=="development"){
+  cssNote = "In this mode, compiled css is loaded dynamically."
+}
+else if (mode == "production") {
+  cssNote="In this mode, compiled css is extracted to a separate stylesheet, or optionally injected into the head of the document."
+}
 
-console.log('Hello modernjs on the front end');
-console.log(process.env.NODE_ENV);
+console.log('Hello Mode');
+console.log('Mode is running in ' + mode + ' mode');
 console.log(cssNote);
-console.log(sum(2,4));//this should throw an error to test source mapping
+
+console.log('This secret is available in  either mode: ' + secret);

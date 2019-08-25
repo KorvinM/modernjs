@@ -13,7 +13,7 @@ module.exports = {
       {/*  //run js through babel and load */
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader', 'eslint-loader'],
       }
     ]
   },
