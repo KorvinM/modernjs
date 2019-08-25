@@ -26,7 +26,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Mode',
-      subtitle: 'Front-end web foundation',
+      subtitle: 'Web foundation',
       template: './src/index.html'
     }),
     new CopyPlugin([

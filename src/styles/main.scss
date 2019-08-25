@@ -3,15 +3,14 @@ body{
   margin-top:0.62em;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
-  color: #fff3dd;
+  color: #fffdd8;
   background-color: rebeccapurple;}
 h1{font-size: 2em;}
 h1, h2{margin:0 auto;
-  color: antiquewhite;
   font-family: 'Raleway', serif;
   font-weight: 600;
   text-align: center;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.1em;
   text-shadow:3px 3px 3px black;
   }
 div.block{
@@ -25,7 +24,19 @@ code {
   background-color:rgba(0,0,0,0.38);
   padding: 0.24em;
   user-select: none;
-  font-size: 1rem;}
+  font-size: 0.93rem;}
+a{text-decoration:none; transition: all 0.38s;
+    color: #e3be3f;}
+a:hover{text-decoration:none;color: #ffe792;}
+footer.main-footer{
+    line-height: 1.4;
+    margin: 1em auto 0;
+    border-radius: 0.6em;
+    width:93%;
+    padding:0.38em 1em 0;
+    background: #1c146d;}
+.flx{display:flex; align-items: center;
+    justify-content: space-around;}
 
 @media only screen and (min-width: 38em) {
 
@@ -43,18 +54,6 @@ code {
     font-size: 1.16rem;
 }
   h1{font-size: 3em;}
+  code{font-size: 1rem;}
   footer.main-footer{width:62%}
-
 }
-a{text-decoration:none; transition: all 0.38s;
-  color: #e3be3f;}
-a:hover{text-decoration:none;color: #ffe792;}
-footer.main-footer{
-  line-height: 1.4;
-  margin: 1em auto 0;
-  border-radius: 0.6em;
-  width:93%;
-  padding:0.38em 1em 0;
-  background: #1c146d;}
-.flx{display:flex; align-items: center;
-  justify-content: space-around;}
