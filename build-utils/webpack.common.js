@@ -2,6 +2,8 @@ const path = require('path'),
   {CleanWebpackPlugin} = require('clean-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin');
   const CopyPlugin = require('copy-webpack-plugin');
+  const Dotenv = require('dotenv-webpack');
+
 
 module.exports = {
   /*use src/index.js as entry point to bundle.
@@ -10,7 +12,7 @@ module.exports = {
   entry: './src/index.js',
   module: {
     rules: [
-      {/*  //run js through babel and load */
+      {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
@@ -29,7 +31,10 @@ module.exports = {
     }),
     new CopyPlugin([
       {from: './src/static', to: 'static'}
-    ])
+    ]),
+    new Dotenv({
+      path: './.env',
+    })
   ],
 //*/
   //define the output path

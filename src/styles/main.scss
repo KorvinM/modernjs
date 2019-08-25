@@ -1,25 +1,40 @@
 @import "normalize.scss";
 body{
+  margin-top:0.62em;
+  font-family: 'Roboto', sans-serif;
   font-size: 1em;
-  font-family: sans;color: whitesmoke;
+  color: #ffeedd;
   background-color: rebeccapurple;}
 h1{font-size: 2em;}
 h1, h2{margin:0 auto;
+  color: antiquewhite;
+  font-family: 'Raleway', serif;
+  font-weight: 600;
   text-align: center;
   letter-spacing: 0.17em;
   text-shadow:3px 3px 3px black;
   }
-div.block{background-color: #3b0d6a;
-  width:86%;
-  margin: 0.62em auto;
-  padding: 0.62em 1em 0.24em 1.4em;
+div.block{
+  background-color: #3b0d6a;
+  width:93%;
+  margin: 0.38em auto 0.38em;
+  padding: 0.38em 0.62em 0.24em 1em;
   border-radius: 3.8em 6.2em 0 2.4em;}
-code {background-color:rgba(0,0,0,0.38);
-  padding: 0 0.24em;user-select: none;}
-  
+
+code {
+  background-color:rgba(0,0,0,0.38);
+  padding: 0 0.24em;
+  user-select: none;
+  font-size: 1rem;}
+
 @media only screen and (min-width: 36em) {
+
   body{font-size: 1.06em;}
-  div.block{padding-left: 2em}
+  div.block{
+    padding-left: 2em;
+    padding: 0.62em 1em 0.24em 2em;
+    font-size: 1.14rem;
+}
   .lead{font-size: 1.24em;}
 }
 @media only screen and (min-width: 60em) {
@@ -36,7 +51,7 @@ footer.main-footer{
   margin: 1em auto 0;
   border-radius: 0.6em;
   width:88%;
-  padding:0.62em 1em 0;
+  padding:0.38em 1em 0;
   background: #1c146d;}
 .flx{display:flex; align-items: center;
   justify-content: space-around;}
