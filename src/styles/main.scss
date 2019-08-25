@@ -3,10 +3,10 @@ body{
   margin-top:0.62em;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
-  color: #fffdd8;
+  color: #fafaf3;
   background-color: rebeccapurple;}
-h1{font-size: 2em;}
 h1, h2{margin:0 auto;
+  color: #ddd;
   font-family: 'Raleway', serif;
   font-weight: 600;
   text-align: center;
@@ -35,6 +35,11 @@ footer.main-footer{
     width:93%;
     padding:0.38em 1em 0;
     background: #1c146d;}
+
+.note {
+  font-size:0.93em;
+  text-align:right;}
+
 .flx{display:flex; align-items: center;
     justify-content: space-around;}
 

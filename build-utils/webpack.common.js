@@ -1,8 +1,8 @@
 const path = require('path'),
-  {CleanWebpackPlugin} = require('clean-webpack-plugin'),
-  HtmlWebpackPlugin = require('html-webpack-plugin');
-  const CopyPlugin = require('copy-webpack-plugin');
-  const Dotenv = require('dotenv-webpack');
+      {CleanWebpackPlugin} = require('clean-webpack-plugin'),
+      HtmlWebpackPlugin = require('html-webpack-plugin'),
+      CopyPlugin = require('copy-webpack-plugin'),
+      Dotenv = require('dotenv-webpack');
 
 
 module.exports = {

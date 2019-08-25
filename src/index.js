@@ -5,16 +5,16 @@ import '../src/styles/main.scss';
 const mode = process.env.NODE_ENV;
 const secret = process.env.MY_SECRETTHING;
 
-let cssNote;
+let modeNote;
 if (mode=="development"){
-  cssNote = "In this mode, compiled css is loaded dynamically."
+  modeNote = "In this mode, compiled css is loaded dynamically."
 }
 else if (mode == "production") {
-  cssNote="In this mode, compiled css is extracted to a separate stylesheet, or optionally injected into the head of the document."
+  modeNote="In this mode, compiled css is extracted to a separate stylesheet, or optionally injected into the head of the document."
 }
 
 console.log('Hello Mode');
 console.log('Mode is running in ' + mode + ' mode');
-console.log(cssNote);
+console.log(modeNote);
 
-console.log('This secret is available in  either mode: ' + secret);
+console.log('This secret is available in either mode: ' + secret);

@@ -1,6 +1,6 @@
-const Dotenv = require('dotenv-webpack');
-const CssExtract = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Dotenv = require('dotenv-webpack'),
+      CssExtract = require('mini-css-extract-plugin'),
+      UglifyJs = require('uglifyjs-webpack-plugin');
 module.exports ={
   mode: 'production',
   devtool: 'source-map',
@@ -19,6 +19,6 @@ module.exports ={
     new CssExtract(),
   ],
   optimization: {
-    minimizer: [new UglifyJsPlugin()],
+    minimizer: [new UglifyJs()],
   },
 };

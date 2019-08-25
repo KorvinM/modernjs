@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
     "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
-    "build:int-style": "npm run build -- --env.addon=internalcss",
+    "build:int-css": "npm run build -- --env.addon=internalcss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
