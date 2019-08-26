@@ -30,7 +30,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Mode',
       subtitle: 'Web foundation',
-      template: './src/index.html'
+      description: 'Front end web foundation using webpack',
+      template: './src/index.html',
     }),
     new CopyPlugin([
       {from: './src/static', to: 'static'}
