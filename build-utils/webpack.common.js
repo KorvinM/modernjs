@@ -1,9 +1,12 @@
+/* webpack.common.js
+ * required by webpack.config.js
+ */
+
 const path = require('path'),
       {CleanWebpackPlugin} = require('clean-webpack-plugin'),
       HtmlWebpackPlugin = require('html-webpack-plugin'),
       CopyPlugin = require('copy-webpack-plugin'),
       Dotenv = require('dotenv-webpack');
-
 
 module.exports = {
   /*use src/index.js as entry point to bundle.
@@ -32,7 +35,7 @@ module.exports = {
     new CopyPlugin([
       {from: './src/static', to: 'static'}
     ]),
-    new Dotenv({
+    new Dotenv({//refers to common .env file
       path: './.env',
     })
   ],

@@ -1,3 +1,7 @@
+/* webpack.prod.js
+ * run by [npm run build]
+ */
+
 const Dotenv = require('dotenv-webpack'),
       CssExtract = require('mini-css-extract-plugin'),
       UglifyJs = require('uglifyjs-webpack-plugin'),
@@ -19,12 +23,13 @@ module.exports ={
     }),
     new CssExtract(),
     new OptimizeCssAssets({
+      //default options for reference
       //assetNameRegExp: /\.optimize\.css$/g,
-      cssProcessor: require('cssnano'),
+      //cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {
         preset: ['default', { discardComments: { removeAll: true } }],
       },
-      canPrint: true
+      //canPrint: true
     })
   ],
   optimization: {

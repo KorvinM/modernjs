@@ -1,3 +1,11 @@
+/* webpack.config.js
+ * returns a config for webpack
+ * merges webpack.common.js config
+ * dev [npm start]
+ * or prod [npm run build*]
+ * optional addons
+ */
+
 const webpackMerge = require('webpack-merge'),
       commonConfig = require('./webpack.common.js');
 
@@ -13,8 +21,6 @@ const getAddons = addonsArgs => {
 };
 
 module.exports = ({ env, addon }) => {
-
   const envConfig = require(`./webpack.${env}.js`);
-
   return webpackMerge(commonConfig, envConfig, ...getAddons(addon));
 };

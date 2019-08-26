@@ -1,4 +1,9 @@
+/* webpack.dev.js
+ * run by [npm start]
+ */
+ 
 const Dotenv = require('dotenv-webpack');
+
 module.exports ={
   mode: 'development',
   devtool: 'eval-source-map',
