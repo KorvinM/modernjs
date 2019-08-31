@@ -3,6 +3,8 @@
 import '../src/styles/main.scss';
 import '../src/site.webmanifest';
 import '../src/browserconfig.xml';
+import '../src/robots.txt';
+
 /*rename some GLOBALS. This could best be abstracted into a file/module*/
 const mode = process.env.NODE_ENV;
 const secret = process.env.MY_SECRETTHING;
