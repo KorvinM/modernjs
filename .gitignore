@@ -2,6 +2,7 @@
 .env*
 #ignore node modules
 node_modules/
-
+#ignore icon dir
+src/static/icons/
 #ignore build dir
 build/

@@ -1,6 +1,5 @@
 /* webpack.common.js
- * required by webpack.config.js
- */
+ * required by webpack.config.js */
 
 const path = require('path'),
       {CleanWebpackPlugin} = require('clean-webpack-plugin'),
@@ -19,6 +18,17 @@ module.exports = {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
+      },
+      {
+        test: /\.(webmanifest|xml)/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',//these files should not be renamed
+            },
+          },
+        ],
       }
     ]
   },
@@ -35,6 +45,9 @@ module.exports = {
     }),
     new CopyPlugin([
       {from: './src/static', to: 'static'}
+    ]),
+    new CopyPlugin([
+      {from: './src/favicon.ico', to: 'favicon.ico'}
     ]),
     new Dotenv({//refers to common .env file
       path: './.env',

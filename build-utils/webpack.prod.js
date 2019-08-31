@@ -1,6 +1,5 @@
 /* webpack.prod.js
- * run by [npm run build]
- */
+ * run by [npm run build] */
 
 const Dotenv = require('dotenv-webpack'),
       CssExtract = require('mini-css-extract-plugin'),

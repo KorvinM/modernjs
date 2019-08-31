@@ -1,10 +1,9 @@
 /* webpack.config.js
- * returns a config for webpack
- * merges webpack.common.js config
+ * returns a config for webpack, merging:
+ * webpack.common.js config
  * dev [npm start]
  * or prod [npm run build*]
- * optional addons
- */
+ * optional addons */
 
 const webpackMerge = require('webpack-merge'),
       commonConfig = require('./webpack.common.js');

@@ -1,7 +1,6 @@
 /* webpack.dev.js
- * run by [npm start]
- */
- 
+ * run by [npm start] */
+
 const Dotenv = require('dotenv-webpack');
 
 module.exports ={
