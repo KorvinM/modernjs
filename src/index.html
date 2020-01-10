@@ -18,7 +18,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <div class="block">
+    <header class="block">
       <h1><%= htmlWebpackPlugin.options.title %></h1>
       <h2><%= htmlWebpackPlugin.options.subtitle %></h2>
       <p class="lead">Hi there. Mode represents a base for a front-end web application built in webpack.
@@ -27,28 +27,26 @@
         copies static assets such as images and <a href="static/documents/mode.pdf">
         documents</a> with a dedicated /static directory - no need to import them
         in your JS.
-        <p> Production and development modes are enabled. Check your browser's console for more information.
-          <p class="note">
-            Inspiration: <a href="https://www.robinwieruch.de/">Robin Wieruch</a>'s 'modern JS' tutorials <a href="https://www.robinwieruch.de/javascript-project-setup-tutorial">
+      <p> Production and development modes are enabled. Check your browser's console for more information.
+      <p class="note">
+        Inspiration: <a href="https://www.robinwieruch.de/">Robin Wieruch</a>'s 'modern JS' tutorials <a href="https://www.robinwieruch.de/javascript-project-setup-tutorial">
               [1]</a>
-    </div>
-      <div class="block">
-        <h2>How to use</h2><p>
-          To recreate this site, use <a href="https://github.com/KorvinM/modernjs/tree/frontend">this branch</a> of the project.
-        <br><code>npm start</code> to run in dev mode.
+    </header>
+    <article class="block">
+      <h2>How to use</h2>
+      <p>To recreate this site, use <a href="https://github.com/KorvinM/modernjs/tree/frontend">this branch</a> of the project.
+        <br>For a more minimalist front-end, use <a href="">this branch</a>.
+        <p><code>npm start</code> to run in dev mode.
         <br><code>npm run build</code> for a production build into a /build directory, with a main.css stylesheet.
         <br><code>npm run build:int-css</code> for a production build with css injected into the head
-
         <p>Webkit analytics tools are included:
           <br><code>npm run build:analyze</code> generates a <a href="report.html">report</a> and a
          <a href="stats.html">statistics visualisation</a> of the build.
-
-
-    </div>
+    </article>
     <footer class="main-footer flx">
       <div style="">A project by <a href="http://korvin.org">Korvin M Media</a></div>
       <div><a href="http://webpack.js.org"><img height=50px style="" src="static/images/webpack-logo.svg"></a>
-</div>
+      </div>
       <div style=""><a href="https://github.com/KorvinM/modernjs/">Source code on Github</a></div>
     </footer>
 
