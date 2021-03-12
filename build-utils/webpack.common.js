@@ -43,12 +43,16 @@ module.exports = {
       description: 'Front end web foundation using webpack',
       template: './src/index.html',
     }),
-    new CopyPlugin([
-      {from: './src/static', to: 'static'}
-    ]),
-    new CopyPlugin([
+    new CopyPlugin({
+      patterns: [
+        {from: './src/static', to: 'static'},
+        {from: './src/favicon.ico', to: 'favicon.ico'}
+      ]
+    }),
+    new CopyPlugin({
+      patterns: [
       {from: './src/favicon.ico', to: 'favicon.ico'}
-    ]),
+    ]}),
     new Dotenv({//refers to common .env file
       path: './.env',
     })
@@ -57,7 +61,7 @@ module.exports = {
   //define the output path
   output: {
     path: path.resolve(__dirname,'../','build'),
-    publicPath: '/',
+    publicPath: '',
     filename: 'bundle.js'
   },
   //define the development server path
